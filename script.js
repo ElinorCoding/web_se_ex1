@@ -19,7 +19,8 @@ function deleteLast() {
 // Function to calculate the result
 function calculate() {
     try {
-        // Evaluate the expression in the display
+        // Note: Using eval() for simplicity in this educational example.
+        // In production, use a proper math expression parser for security.
         const result = eval(display.value);
         display.value = result;
     } catch (error) {
