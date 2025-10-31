@@ -1,0 +1,127 @@
+密码与用户名/邮箱关联分析报告
+==================================================
+数据记录总数: 6882134
+检测到相关的密码数: 761606 (11.07%)
+未检测到关联的密码数: 6120528 (88.93%)
+
+按优先级统计（primary relation counts）：
+  exact_username: 320496
+  exact_email: 3037
+  contains_username: 136127
+  contains_localpart: 179171
+  contains_token: 121125
+  deleet_contains_username: 259
+  deleet_contains_token: 599
+  reversed_username: 792
+
+示例（每类最多10条）:
+
+--- exact_username ---
+  src=plaintxt_yahoo.txt, username=prncssmn7@aol.com, email=prncssmn7@aol.com, password=Prncssmn7@aol.com
+  src=plaintxt_yahoo.txt, username=andre@hotmail.com, email=andre@hotmail.com, password=andre@hotmail.com
+  src=plaintxt_yahoo.txt, username=ekas@germanos.com.mk, email=ekas@germanos.com.mk, password=ekas@germanos.com.mk
+  src=www.csdn.net.sql, username=wangang, email=wanpost@yahoo.com.cn, password=wangang
+  src=www.csdn.net.sql, username=Aswind, email=aswind@188.net, password=aswind
+  src=www.csdn.net.sql, username=BlackSword, email=zjning@flink.net.cn, password=blacksword
+  src=www.csdn.net.sql, username=jamstang, email=jamstang@163.com, password=jamstang
+  src=www.csdn.net.sql, username=jing, email=jing127@sina.com, password=jing
+  src=www.csdn.net.sql, username=chill, email=chillkwanjane@netease.com, password=chill
+  src=www.csdn.net.sql, username=SiMAN, email=3721@163.net, password=SIMAN
+
+--- exact_email ---
+  src=www.csdn.net.sql, username=wpccnxl, email=hero594@126.com, password=hero594@126.com
+  src=www.csdn.net.sql, username=dzj1005, email=1234, password=1234
+  src=www.csdn.net.sql, username=DELLdell123456789, email=hua.zhang@41go.cn, password=hua.zhang@41go.cn
+  src=www.csdn.net.sql, username=joytt_168, email=joytt168@163.com, password=joytt168@163.com
+  src=www.csdn.net.sql, username=wopass, email=haomihao@163.com, password=haomihao@163.com
+  src=www.csdn.net.sql, username=sunvvip, email=sunv@vip.qq.com, password=sunv@vip.qq.com
+  src=www.csdn.net.sql, username=wuqi20080601, email=wuqi20080601@126.com, password=wuqi20080601@126.com
+  src=www.csdn.net.sql, username=hnsmsq, email=hnsmsq@126.com, password=hnsmsq@126.com
+  src=www.csdn.net.sql, username=jhdrwer, email=jhdrwer@163.com, password=jhdrwer@163.com
+  src=www.csdn.net.sql, username=ujert, email=ujert@163.com, password=ujert@163.com
+
+--- contains_username ---
+  src=www.csdn.net.sql, username=JinBo, email=players@21cn.com, password=ljinbo
+  src=www.csdn.net.sql, username=zhy, email=zhuyan@263.net, password=zhy1428
+  src=www.csdn.net.sql, username=jxl, email=jxl11jxl@371.net, password=jxljxl
+  src=www.csdn.net.sql, username=robin, email=boluo@liang.com.cn, password=robinson
+  src=www.csdn.net.sql, username=Hans, email=hansxia@126.com, password=hans72
+  src=www.csdn.net.sql, username=lighttop, email=lighttop@21cn.com, password=cxlighttop
+  src=www.csdn.net.sql, username=peter, email=xzc@kingstargroup.com.cn, password=xiapeter
+  src=www.csdn.net.sql, username=why, email=littlesong73@163.com, password=Swhy920520
+  src=www.csdn.net.sql, username=sky, email=skyvense@online.sh.cn, password=pingsky28skm
+  src=www.csdn.net.sql, username=tide, email=yunchao.zhang@gmail.com, password=tide9999
+
+--- contains_localpart ---
+  src=plaintxt_yahoo.txt, username=steveol@flash.net, email=steveol@flash.net, password=steveol
+  src=plaintxt_yahoo.txt, username=chotzi@aol.com, email=chotzi@aol.com, password=chotzi
+  src=plaintxt_yahoo.txt, username=lb2512@yahoo.com, email=lb2512@yahoo.com, password=lb2512
+  src=plaintxt_yahoo.txt, username=jon@BirdBrainStudio.com, email=jon@BirdBrainStudio.com, password=jon1216
+  src=plaintxt_yahoo.txt, username=mekola@hughes.net, email=mekola@hughes.net, password=mekola
+  src=plaintxt_yahoo.txt, username=ldeon@rankingyourwaytothebank.com, email=ldeon@rankingyourwaytothebank.com, password=ldeon
+  src=plaintxt_yahoo.txt, username=demo@associatedcontent.com, email=demo@associatedcontent.com, password=demo
+  src=plaintxt_yahoo.txt, username=deb@deborahjledford.com, email=deb@deborahjledford.com, password=thedebster
+  src=plaintxt_yahoo.txt, username=sarwar90034@yahoo.com, email=sarwar90034@yahoo.com, password=sarwar90034
+  src=plaintxt_yahoo.txt, username=jbmeow@yahoo.com, email=jbmeow@yahoo.com, password=jbmeow
+
+--- contains_token ---
+  src=plaintxt_yahoo.txt, username=doyle.brooks@gmail.com, email=doyle.brooks@gmail.com, password=janbrooks
+  src=plaintxt_yahoo.txt, username=nichut@msn.com, email=nichut@msn.com, password=welcome
+  src=plaintxt_yahoo.txt, username=Tara_D_Gilbert@hotmail.com, email=Tara_D_Gilbert@hotmail.com, password=4taradiona
+  src=plaintxt_yahoo.txt, username=khosten@earthlink.net, email=khosten@earthlink.net, password=mrnetsoh
+  src=plaintxt_yahoo.txt, username=ron_nabity@yahoo.com, email=ron_nabity@yahoo.com, password=ronmann
+  src=plaintxt_yahoo.txt, username=anthony@coachanthony.com, email=anthony@coachanthony.com, password=natcom01
+  src=plaintxt_yahoo.txt, username=jessie.rosen@gmail.com, email=jessie.rosen@gmail.com, password=jessie
+  src=plaintxt_yahoo.txt, username=mrdrysdale@insightbb.com, email=mrdrysdale@insightbb.com, password=computer
+  src=plaintxt_yahoo.txt, username=lasicilianpazzo@hotmail.com, email=lasicilianpazzo@hotmail.com, password=5comthor5
+  src=plaintxt_yahoo.txt, username=traci.ochlich@cox.net, email=traci.ochlich@cox.net, password=ochlich
+
+--- deleet_contains_username ---
+  src=www.csdn.net.sql, username=l, email=reng@jj.ee, password=1
+  src=www.csdn.net.sql, username=G, email=lu_guoxiong@163.net, password=252616
+  src=www.csdn.net.sql, username=onceskying, email=onceskying@163.com, password=0nceskyings
+  src=www.csdn.net.sql, username=dymgg, email=dymsc01@21cn.com, password=dym6677686
+  src=www.csdn.net.sql, username=kingdone, email=gnbook@gmail.com, password=kingd0ne
+  src=www.csdn.net.sql, username=isinglz, email=isinglz@163.com, password=ising123456
+  src=www.csdn.net.sql, username=A__, email=1111111ws@189.net, password=159357456258
+  src=www.csdn.net.sql, username=zhijunl, email=peixh@tdtk.com, password=ZHIJUN147258
+  src=www.csdn.net.sql, username=snnoooo, email=janw80@163.com, password=snn00000
+  src=www.csdn.net.sql, username=liudls, email=liudls@126.com, password=liudl520
+
+--- deleet_contains_token ---
+  src=plaintxt_yahoo.txt, username=emerinx84@aol.com, email=emerinx84@aol.com, password=celia018
+  src=plaintxt_yahoo.txt, username=c_gensch@yahoo.com, email=c_gensch@yahoo.com, password=g3n5cH300
+  src=plaintxt_yahoo.txt, username=natalilys@aol.com, email=natalilys@aol.com, password=nia_0129
+  src=plaintxt_yahoo.txt, username=im_a_dancing_gorilla@yahoo.com, email=im_a_dancing_gorilla@yahoo.com, password=gorill@
+  src=plaintxt_yahoo.txt, username=athena_catedral@yahoo.com, email=athena_catedral@yahoo.com, password=acatedra1
+  src=plaintxt_yahoo.txt, username=yflores20@comcast.net, email=yflores20@comcast.net, password=voine72
+  src=plaintxt_yahoo.txt, username=halogirljen@aol.com, email=halogirljen@aol.com, password=052401
+  src=plaintxt_yahoo.txt, username=ldnajoli@aol.com, email=ldnajoli@aol.com, password=2401299c
+  src=plaintxt_yahoo.txt, username=james@coscend.com, email=james@coscend.com, password=cosc3nd
+  src=plaintxt_yahoo.txt, username=ednahorton1@sbcglobal.net, email=ednahorton1@sbcglobal.net, password=cleburne76
+
+--- reversed_username ---
+  src=www.csdn.net.sql, username=wolf, email=xinpin76@163.net, password=flow_csdn
+  src=www.csdn.net.sql, username=kkk321, email=kkk321@263.net, password=123kkk
+  src=www.csdn.net.sql, username=corin, email=free_bsd_386@sina.com, password=niroc
+  src=www.csdn.net.sql, username=iab, email=bxyuan@163.net, password=baicsdnnet
+  src=www.csdn.net.sql, username=yiyayiyaoooooo, email=jjt2008jjt@126.com, password=ooooooayiyayiy
+  src=www.csdn.net.sql, username=layrry, email=layrry@163.com, password=55yrryal
+  src=www.csdn.net.sql, username=pppoopppp, email=ouer7@126.com, password=ppppooppp
+  src=www.csdn.net.sql, username=regnad, email=lxzchatting@21cn.com, password=dangerlxz
+  src=www.csdn.net.sql, username=ffpphh, email=980683884@qq.com, password=hhppffhpf
+  src=www.csdn.net.sql, username=i8i8i8i8, email=dmgy59@sina.com, password=8i8i8i8i
+
+--- no_relation ---
+  src=plaintxt_yahoo.txt, username=user_name, email=, password=passwd
+  src=plaintxt_yahoo.txt, username=ac1@associatedcontent.com, email=ac1@associatedcontent.com, password=@fl!pm0de@
+  src=plaintxt_yahoo.txt, username=john@associatedcontent.com, email=john@associatedcontent.com, password=pass
+  src=plaintxt_yahoo.txt, username=daveflomberg@yahoo.com, email=daveflomberg@yahoo.com, password=scotch
+  src=plaintxt_yahoo.txt, username=jayschinderman@yahoo.com, email=jayschinderman@yahoo.com, password=passwerd
+  src=plaintxt_yahoo.txt, username=leonardo.delarocha@gmail.com, email=leonardo.delarocha@gmail.com, password=flipmode
+  src=plaintxt_yahoo.txt, username=miguel@associatedcontent.com, email=miguel@associatedcontent.com, password=flipmode
+  src=plaintxt_yahoo.txt, username=kirsten@associatedcontent.com, email=kirsten@associatedcontent.com, password=alden2
+  src=plaintxt_yahoo.txt, username=ewowen@comcast.net, email=ewowen@comcast.net, password=salmon
+  src=plaintxt_yahoo.txt, username=timarmstrong@gmail.com, email=timarmstrong@gmail.com, password=tagoogle
+
+匹配结果的全部记录已保存为 CSV： analysis_relation\matches.csv
