@@ -1,3 +1,5 @@
+#本代码完成分析1：① 密码构成元素分析（数字、字符、字母等）和结构分析，得到密码中这些基本元素常用的组合方法；
+# 分析结果保存在1_analysis_results目录下
 import re
 import matplotlib.pyplot as plt
 from collections import Counter
@@ -183,7 +185,7 @@ def analyze_cross(file1_pwds, file2_pwds, report_file):
 # ========== 主程序入口 ==========
 def main():
     print("=" * 60)
-    print("🔍 密码特征分析实验 (图表英文版)")
+    print("密码特征分析实验 (图表英文版)")
     print("=" * 60)
     print(f"文件1: {FILE1}")
     print(f"文件2: {FILE2}")
@@ -204,8 +206,8 @@ def main():
 
         analyze_cross(pwds1, pwds2, report_file)
 
-    print(f"✅ 分析完成！报告已保存至: {REPORT_PATH}")
-    print(f"📊 图表已保存至: {OUTPUT_DIR}")
+    print(f"分析完成！报告已保存至: {REPORT_PATH}")
+    print(f"图表已保存至: {OUTPUT_DIR}")
 
 
 if __name__ == "__main__":

@@ -1,3 +1,6 @@
+#本代码检测密码的复杂度（信息熵计算）
+# 分析结果保存在6_analysis_results目录下
+import os
 import math
 import re
 import matplotlib.pyplot as plt
@@ -6,9 +9,14 @@ from collections import Counter
 # ========== 全局参数 ==========
 FILE1 = "plaintxt_yahoo.txt"   # Yahoo文件
 FILE2 = "www.csdn.net.sql"     # CSDN文件
-REPORT_FILE = "report_entropy.txt"
+
+OUTPUT_DIR = "6_analysis_results"
+REPORT_FILE = os.path.join(OUTPUT_DIR, "report_entropy.txt")
 
 # ========== 工具函数 ==========
+def sanitize_label(label):
+    """把 label 转为文件名安全的形式"""
+    return re.sub(r'[^A-Za-z0-9_-]+', '_', label)
 
 def extract_password_yahoo(line):
     parts = line.strip().split(":")
@@ -105,13 +113,15 @@ def analyze_entropy(passwords, label):
         f.write("\n")
 
     # ========== 可视化 ==========
+    safe_label = sanitize_label(label)
+
     plt.figure(figsize=(8, 4))
     plt.hist(entropies, bins=30, color="#69b3a2", edgecolor="black", alpha=0.8)
     plt.title(f"Entropy Distribution - {label}")
     plt.xlabel("Entropy (bits/char)")
     plt.ylabel("Count")
     plt.tight_layout()
-    plt.savefig(f"entropy_distribution_{label}.png")
+    plt.savefig(os.path.join(OUTPUT_DIR, f"entropy_distribution_{safe_label}.png"))
     plt.close()
 
     plt.figure(figsize=(5, 5))
@@ -122,12 +132,14 @@ def analyze_entropy(passwords, label):
         colors=["#ff9999", "#ffcc99", "#99ff99"],
     )
     plt.title(f"Entropy Level Ratio - {label}")
-    plt.savefig(f"entropy_ratio_{label}.png")
+    plt.savefig(os.path.join(OUTPUT_DIR, f"entropy_ratio_{safe_label}.png"))
     plt.close()
-
 
 # ========== 主程序入口 ==========
 def main():
+    # 确保输出目录存在
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+
     print("=" * 60)
     print("🧩 密码语义复杂度分析 (Shannon Entropy)")
     print("=" * 60)
@@ -140,15 +152,14 @@ def main():
 
     # 清空报告文件
     with open(REPORT_FILE, "w", encoding="utf-8") as f:
-        f.write("🔍 密码语义复杂度分析报告（基于信息熵）\n")
+        f.write("密码语义复杂度分析报告（基于信息熵）\n")
         f.write("说明：熵越高表示随机性越强，密码越安全。\n\n")
 
     analyze_entropy(pwds1, "Yahoo")
     analyze_entropy(pwds2, "CSDN")
 
-    print(f"✅ 分析完成，结果已保存至 {REPORT_FILE}")
-    print(f"✅ 图表文件已生成：entropy_distribution_*.png, entropy_ratio_*.png")
-
+    print(f"分析完成，结果已保存至 {REPORT_FILE}")
+    print(f"图表文件已生成：{os.path.join(OUTPUT_DIR, 'entropy_distribution_*.png')}, {os.path.join(OUTPUT_DIR, 'entropy_ratio_*.png')}")
 
 if __name__ == "__main__":
     main()

@@ -124,4 +124,4 @@
   src=plaintxt_yahoo.txt, username=ewowen@comcast.net, email=ewowen@comcast.net, password=salmon
   src=plaintxt_yahoo.txt, username=timarmstrong@gmail.com, email=timarmstrong@gmail.com, password=tagoogle
 
-匹配结果的全部记录已保存为 CSV： analysis_relation\matches.csv
+匹配结果的全部记录已保存为 CSV： 7_analysis_results\matches.csv

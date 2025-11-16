@@ -1,3 +1,5 @@
+#本代码完成键盘密码的模式分析，键盘密码就是基于键位变化的一类密码，比如asdfgh；
+# 分析结果保存在1_analysis_results目录下
 import re
 import matplotlib.pyplot as plt
 from collections import Counter
@@ -6,7 +8,7 @@ import os
 # ========== 全局参数 ==========
 FILE1 = "plaintxt_yahoo.txt"
 FILE2 = "www.csdn.net.sql"
-OUTPUT_DIR = "analysis_results_keyboard_v3"
+OUTPUT_DIR = "2_analysis_results"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # ========== 键盘布局扩展 ==========
@@ -177,7 +179,7 @@ def analyze_keyboard_patterns(passwords, label):
 # ========== 主程序 ==========
 def main():
     print("=" * 60)
-    print("🔍 键盘密码模式分析 (v3 Enhanced)")
+    print("键盘密码模式分析")
     print("=" * 60)
 
     pwds1 = load_passwords(FILE1)
@@ -186,7 +188,7 @@ def main():
     analyze_keyboard_patterns(pwds1, "Yahoo")
     analyze_keyboard_patterns(pwds2, "CSDN")
 
-    print("\n✅ 分析完成，结果已保存。")
+    print("\n分析完成，结果已保存。")
 
 
 if __name__ == "__main__":
