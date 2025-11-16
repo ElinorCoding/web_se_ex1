@@ -1,5 +1,5 @@
 #本代码完成键盘密码的模式分析，键盘密码就是基于键位变化的一类密码，比如asdfgh；
-# 分析结果保存在1_analysis_results目录下
+# 分析结果保存在2_analysis_results目录下
 import re
 import matplotlib.pyplot as plt
 from collections import Counter
