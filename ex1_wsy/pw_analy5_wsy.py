@@ -10,8 +10,8 @@ OUTPUT_DIR = "5_english_word_analysis_results"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 REPORT_PATH = os.path.join(OUTPUT_DIR, "英文单词使用分析报告.txt")
 
-FILE1 = "plaintxt_yahoo.txt"
-FILE2 = "www.csdn.net.sql"
+FILE1 = "../plaintxt_yahoo.txt"
+FILE2 = "../www.csdn.net.sql"
 COUNT_MODE = 'unique_per_password'  # 每个密码只统计一次单词
 
 # ========== 噪声过滤机制 ==========
@@ -28,7 +28,7 @@ PINYIN_SURNAMES = {
     'liang', 'wei', 'jiang', 'han', 'fan', 'peng', 'yuan', 'cao', 'fu', 'ren',
     'fang', 'jing', 'cheng', 'qian', 'mo', 'qiu', 'long', 'chang',
     'qiao', 'mei', 'hua', 'jin', 'tao', 'qi', 'wen', 'yan', 'bao', 'du',
-    'ye', 'su', 'pei', 'luo', 'shan', 'hou', 'qin', 'ruan', 'tan', 'lv'
+    'ye', 'su', 'pei', 'luo', 'shan', 'hou', 'qin', 'ruan', 'tan', 'lu'
 }
 
 def is_noise_word(word):
