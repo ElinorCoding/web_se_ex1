@@ -12,10 +12,10 @@ OUTPUT_DIR = "3_date_analysis_results"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 REPORT_PATH = os.path.join(OUTPUT_DIR, "日期密码分析报告.txt")
 
-FILE1 = "plaintxt_yahoo.txt"
-FILE2 = "www.csdn.net.sql"
+FILE1 = "../plaintxt_yahoo.txt"
+FILE2 = "../www.csdn.net.sql"
 
-NOISE_NUMBERS = ['123456', '654321', '123123', '1234', '4321', '1314', '123321']
+NOISE_NUMBERS = ['123456', '654321', '123123', '1234', '4321', '1314', '123321','1212','1221','2112','1122']
 
 
 # ========== 提取可能的日期片段 ==========
@@ -71,6 +71,7 @@ def classify_date_format(date_str):
         return "MMDD"
     if re.fullmatch(r'(0[1-9]|[12]\d|3[01])(0[1-9]|1[0-2])', date_str):
         return "DDMM"
+
     return "Other"
 
 
@@ -228,7 +229,7 @@ def analyze_date_patterns(passwords, label, report_file):
         values = [v for _, v in items]
         plt.figure(figsize=(8, 4))
         plt.bar(labels, values, color=color)
-        plt.title(title)
+        plt.title(title)                  
         plt.xlabel(xlabel)
         plt.ylabel("数量")
         plt.xticks(rotation=45)
@@ -236,10 +237,10 @@ def analyze_date_patterns(passwords, label, report_file):
         plt.savefig(os.path.join(OUTPUT_DIR, filename))
         plt.close()
 
-    plot_topk(format_counter, f"{label} 日期格式分布 Top-{TOPK}", "Format", f"{label}_date_formats.png")
+    plot_topk(format_counter, f"{label} 日期格式分布", None, f"{label}_date_formats.png")
     plot_topk(year_counter, f"{label} 年份出现频次 Top-{TOPK}", "Year", f"{label}_top_years.png")
-    plot_topk(monthday_counter, f"{label} 月日(MMDD)出现频次 Top-{TOPK}", "MMDD", f"{label}_top_monthdays.png")
-    plot_topk(structure_counter, f"{label} 密码结构 Top-{TOPK}", "Structure", f"{label}_top_structures.png")
+    plot_topk(monthday_counter, f"{label} 月日组合出现频次 Top-{TOPK}", "MMDD", f"{label}_top_monthdays.png")
+    plot_topk(structure_counter, f"{label} 密码结构 Top-{TOPK}", None, f"{label}_top_structures.png")
 
 
 # ========== 主函数 ==========

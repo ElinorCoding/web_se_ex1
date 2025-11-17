@@ -1,8 +1,6 @@
-#!/usr/bin/env python3
-# pw_user_email_relation.py
-# 检测密码与用户名/邮箱之间的关联（包含/相等/反向/邮箱 local-part 等）
-# 使用方式：python pw_user_email_relation.py
-# 输出：analysis_relation/relation_report.txt, analysis_relation/matches.csv, analysis_relation/relation_pie.png
+#本代码检测密码与用户名/邮箱之间的关联（包含/相等/反向/邮箱 local-part 等）
+# 分析结果保存在7_analysis_results目录下
+# 输出：7_analysis_results/relation_report.txt, 7_analysis_results/matches.csv, 7_analysis_results/relation_pie.png
 
 import re
 import os
