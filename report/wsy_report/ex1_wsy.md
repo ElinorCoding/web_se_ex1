@@ -168,7 +168,7 @@
 - 首字母大写：25,942  
 - 混合大小写：6,722  
 
-![alt text](https://5_english_word_analysis_results/CSDN_case_patterns.png)
+![alt text](../../ex1_wsy/5_english_word_analysis_results/CSDN_case_patterns.png)
 
 ![alt text](../../ex1_wsy/5_english_word_analysis_results/CSDN_case_patterns_pie.png)
 
