@@ -16,23 +16,24 @@ COUNT_MODE = 'unique_per_password'  # 每个密码只统计一次单词
 
 # ========== 噪声过滤机制 ==========
 COMMON_NON_WORDS = [
-    r'^[a-z]{1,2}$',                      # 过短字母串
+    r'^[a-z]{1}$',                      # 过短字母串
     r'^(qwe|asd|zxc|poi|lkj|mnb|qaz|wsx|edc|abc)+$',  # 键盘序列
     r'^(aaa|bbb|ccc|ddd|eee|fff)+$',      # 重复字母
 ]
 
-PINYIN_SURNAMES = {
+BLACK_SURNAMES = {
     'wang', 'li', 'zhang', 'liu', 'chen', 'yang', 'zhao', 'wu', 'zhou', 'xu',
     'sun', 'hu', 'zhu', 'gao', 'lin', 'he', 'guo', 'ma', 'lu', 'dong', 'xie',
     'song', 'shi', 'tang', 'feng', 'yu', 'cai', 'pan', 'deng', 'xiao', 'tian',
     'liang', 'wei', 'jiang', 'han', 'fan', 'peng', 'yuan', 'cao', 'fu', 'ren',
-    'fang', 'jing', 'cheng', 'qian', 'mo', 'qiu', 'long', 'chang',
-    'qiao', 'mei', 'hua', 'jin', 'tao', 'qi', 'wen', 'yan', 'bao', 'du',
-    'ye', 'su', 'pei', 'luo', 'shan', 'hou', 'qin', 'ruan', 'tan', 'lu'
+    'fang', 'jing', 'cheng', 'qian', 'mo', 'qiu', 'long', 'chang', 'com', 'ian',
+    'qiao', 'mei', 'hua', 'jin', 'tao', 'qi', 'wen', 'yan', 'bao', 'du', 'bin',
+    'ye', 'su', 'pei', 'luo', 'shan', 'hou', 'qin', 'ruan', 'tan', 'lu', 'hong',
+    'min', 'dan', 'ron', 'juan'
 }
 
 def is_noise_word(word):
-    if word in PINYIN_SURNAMES:
+    if word in BLACK_SURNAMES:
         return True
     for pat in COMMON_NON_WORDS:
         if re.fullmatch(pat, word):
@@ -227,11 +228,12 @@ def main():
     pwds2 = load_passwords(FILE2)
 
     with open(REPORT_PATH, "w", encoding="utf-8") as report_file:
-        analyze_english_words(pwds1, "Yahoo", report_file, min_freq_all=3.0, min_freq_top=5.0)
-        analyze_english_words(pwds2, "CSDN", report_file, min_freq_all=3.0, min_freq_top=5.0)
+        analyze_english_words(pwds1, "Yahoo", report_file, min_freq_all=3.0, min_freq_top=3.5)
+        analyze_english_words(pwds2, "CSDN", report_file, min_freq_all=3.0, min_freq_top=4.0)
 
-    print(f"✅ 英文单词分析完成！报告已保存至: {REPORT_PATH}")
-    print(f"📊 图表已保存至: {OUTPUT_DIR}")
+    print(f" 英文单词分析完成！报告已保存至: {REPORT_PATH}")
+    print(f" 图表已保存至: {OUTPUT_DIR}")
+
 
 if __name__ == "__main__":
     main()
