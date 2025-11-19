@@ -1,0 +1,120 @@
+数据集: yahoo
+模式: 独占
+线程数: 8
+总记录: 442785
+
+=== 单类统计 ===
+same_as_user_or_mail: 1384 (0.31%)
+partial_like_user_or_mail: 4787 (1.08%)
+repeated_chars: 7120 (1.61%)
+dictionary_order: 7606 (1.72%)
+keyboard_pattern: 3687 (0.83%)
+date_like: 9360 (2.11%)
+english_word: 262591 (59.30%)
+numeric_only: 13534 (3.06%)
+other: 132716 (29.97%)
+
+=== 复合特征（组合尺寸>1） ===
+date_like+numeric_only: 6560
+english_word+partial_like_user_or_mail: 3313
+dictionary_order+keyboard_pattern: 2729
+dictionary_order+numeric_only: 2558
+numeric_only+repeated_chars: 2271
+dictionary_order+english_word+keyboard_pattern: 1764
+english_word+repeated_chars: 1654
+english_word+keyboard_pattern: 1020
+english_word+partial_like_user_or_mail+same_as_user_or_mail: 909
+date_like+numeric_only+repeated_chars: 534
+partial_like_user_or_mail+same_as_user_or_mail: 437
+dictionary_order+keyboard_pattern+numeric_only: 324
+keyboard_pattern+repeated_chars: 82
+dictionary_order+english_word+keyboard_pattern+partial_like_user_or_mail: 48
+dictionary_order+english_word: 46
+dictionary_order+keyboard_pattern+numeric_only+repeated_chars: 32
+date_like+dictionary_order+numeric_only: 29
+dictionary_order+keyboard_pattern+partial_like_user_or_mail: 28
+numeric_only+partial_like_user_or_mail: 18
+keyboard_pattern+numeric_only: 17
+date_like+keyboard_pattern: 16
+english_word+partial_like_user_or_mail+repeated_chars: 15
+date_like+numeric_only+partial_like_user_or_mail: 14
+english_word+keyboard_pattern+partial_like_user_or_mail: 13
+partial_like_user_or_mail+repeated_chars: 11
+numeric_only+partial_like_user_or_mail+same_as_user_or_mail: 11
+english_word+keyboard_pattern+partial_like_user_or_mail+same_as_user_or_mail: 9
+dictionary_order+numeric_only+repeated_chars: 9
+keyboard_pattern+partial_like_user_or_mail: 9
+date_like+dictionary_order: 8
+date_like+keyboard_pattern+numeric_only: 5
+dictionary_order+numeric_only+partial_like_user_or_mail: 5
+date_like+partial_like_user_or_mail: 5
+dictionary_order+english_word+keyboard_pattern+partial_like_user_or_mail+same_as_user_or_mail: 3
+dictionary_order+partial_like_user_or_mail: 2
+numeric_only+partial_like_user_or_mail+repeated_chars: 2
+dictionary_order+keyboard_pattern+repeated_chars: 2
+english_word+keyboard_pattern+repeated_chars: 2
+dictionary_order+repeated_chars: 2
+date_like+dictionary_order+keyboard_pattern: 2
+date_like+partial_like_user_or_mail+same_as_user_or_mail: 2
+english_word+partial_like_user_or_mail+repeated_chars+same_as_user_or_mail: 1
+date_like+dictionary_order+keyboard_pattern+numeric_only: 1
+date_like+numeric_only+partial_like_user_or_mail+same_as_user_or_mail: 1
+keyboard_pattern+partial_like_user_or_mail+same_as_user_or_mail: 1
+dictionary_order+english_word+keyboard_pattern+repeated_chars: 1
+dictionary_order+keyboard_pattern+partial_like_user_or_mail+same_as_user_or_mail: 1
+english_word+same_as_user_or_mail: 1
+partial_like_user_or_mail+repeated_chars+same_as_user_or_mail: 1
+dictionary_order+english_word+partial_like_user_or_mail+same_as_user_or_mail: 1
+
+-- 示例（每组合最多10条） --
+[english_word+partial_like_user_or_mail+same_as_user_or_mail] => steveol, chotzi, demo, sarwar90034, gschwaid, mayilly, terry, joannavaughn, beejeepers, hperry
+[partial_like_user_or_mail+same_as_user_or_mail] => lb2512, mekola, ldeon, jbmeow, blimey, kev2012, moose1980, talyre, nolacail, rejoue
+[english_word+repeated_chars] => marymary, wheatwheat, livelive, jazzjazz, dustydusty, rushrush, veryvery, whymewhyme, catcat, weedweed
+[english_word+partial_like_user_or_mail] => janbrooks, 4taradiona, brianmakely@makelyen, sbcfishace58, fredbaxter, john999, wednesday224, mochang, michellemizal1, jeff0211
+[date_like+numeric_only] => 10061971, 122886, 052993, 010979, 100913, 1228, 110179, 031559, 051878, 091042
+[dictionary_order+english_word+keyboard_pattern] => baby1234, qtip3456, ynot1234, mail1234, dmband1234, techgod1234, cats1234, ascension1234, ilovemyfamily1234567, rob98765
+[english_word+keyboard_pattern] => a550c1atedc0ntent, muse3728, dude21, werther, associatedcontent, associatedcontent, choctaw25, jobhunt, associatedcontent, property
+[dictionary_order+keyboard_pattern+numeric_only] => 988965645432, 1234529, 926789, 6365434, 35141234, 12345678910111213141, 098765, 12347420, 11234, 15623456
+[numeric_only+repeated_chars] => 01420142, 333333, 97979797, 696969, 787878, 90439043, 99999999, 42734273, 72657265, 99999999
+[dictionary_order+keyboard_pattern] => f1234567, asdf1234, asdf4321, rory1234, a12345, sgya$12345, jajazm54321, sl1234, nop1234, cc123456
+[keyboard_pattern+repeated_chars] => asdfasdf, zaq1zaq1, asdfasdf, ;lkj;lkj, ;lkj;lkj, poiupoiu, fr3ddfr3dd, asdfasdf, asdfasdf, asdfasdf
+[date_like+keyboard_pattern+numeric_only] => 130987, 090987, 120987, 040987, 020987
+[dictionary_order+numeric_only] => 123456789, 123456, 1234, 123456, 654321, 987654321, 123456, 123456, 123456, 123456
+[keyboard_pattern+numeric_only] => 10987345, 0070987, 1020987, 7890210, 4780987, 3740987, 00987, 0709874817, 7890, 09877890
+[english_word+keyboard_pattern+partial_like_user_or_mail+same_as_user_or_mail] => jenjim24, Prncssmn7@aol.com, jaytrez, chouse335, associatedcontent, mkohsman, boredcoder, donaki78, begrose32
+[dictionary_order+english_word] => mrstuf1, nicky3210, filmnoir58!, abcdana, tray321095, brodie3210, brentonml, 9estuvnl7, jimnopode, sanderson666efghi
+[date_like+numeric_only+repeated_chars] => 123123, 20052005, 19901990, 123123, 19951995, 121212, 19691969, 123123, 111111, 19711971
+[date_like+keyboard_pattern] => 1969ok, sw12221989, aw250877, ju630714, sw112681, de281206, 050912ed, sw102310, 17031964rd, sw102492
+[dictionary_order+keyboard_pattern+partial_like_user_or_mail] => anweshak12345, kaylakravitz1234, epmd1234, a1234, tator1234, basu1234, hina1234, anil#1234, sahoo12345, haniff1234
+[dictionary_order+keyboard_pattern+numeric_only+repeated_chars] => 12341234, 12341234, 12341234, 34523452, 36543654, 34123412, 12341234, 12341234, 12341234, 123456789123456789
+[date_like+dictionary_order+numeric_only] => 012382, 012368, 230123, 321009, 321009, 340123, 012356, 032101, 012345, 032101
+[date_like+numeric_only+partial_like_user_or_mail] => 102405, 14111981, 20071105, 20071105, 281284, 032004, 14051990, 200877, 07081991, 220179
+[numeric_only+partial_like_user_or_mail] => 181900, 11211, 454647, 256772559, 1755121, 30157582010, 002115, 1979121619740602, 52561, 233191
+[english_word+partial_like_user_or_mail+repeated_chars+same_as_user_or_mail] => minkmink
+[dictionary_order+partial_like_user_or_mail] => 32101045jr, 32109noel
+[dictionary_order+english_word+keyboard_pattern+partial_like_user_or_mail] => cawhitlock1234, zekeman1234, sonny4321, samba1234, mathematics1234, alexia1234, cashidea1234, julie123456, jared1234, rachel1234
+[dictionary_order+numeric_only+repeated_chars] => 2103210321032103, 12301230, 12301230, 12301230, 12301230, 21032103, 01230123, 32103210, 12301230
+[keyboard_pattern+partial_like_user_or_mail] => bmjut247, kanjila@0731, tanjil403015, Hanzseros75, BMJut247!, tacdeg70, gaubavibhu, Bosko991, plmkoijbhu98
+[date_like+dictionary_order+keyboard_pattern+numeric_only] => 121234
+[english_word+partial_like_user_or_mail+repeated_chars] => blueblue, rodeorodeo, chanduchandu, 2thgen2thgen, inesines, marc7marc7, hariomhariom, alinnaalinna, joshjosh, davedave
+[date_like+numeric_only+partial_like_user_or_mail+same_as_user_or_mail] => 2005
+[dictionary_order+numeric_only+partial_like_user_or_mail] => 123456, 12345678, 123456, 123456, 1234567
+[numeric_only+partial_like_user_or_mail+repeated_chars] => 27042704, 11111111
+[date_like+dictionary_order] => rs012379, 012300cm, rh012371, 012364a, ch012390, gh032105, cb012384, ko012378
+[english_word+keyboard_pattern+partial_like_user_or_mail] => info@associatedconte, mehranassociatedcont, aniseo!@#$, mokman3036, pushan123$, rose3345, cathy59, cdegarmo0227, BENJIM, lolo825
+[date_like+partial_like_user_or_mail] => it0312, dp0511, th1224, ch1987, kt102187
+[dictionary_order+english_word+keyboard_pattern+partial_like_user_or_mail+same_as_user_or_mail] => combs1234, tin12345, bob123456
+[partial_like_user_or_mail+repeated_chars] => ceppyceppy, blahblahblah, jjjjjjjjj, yazoyazo, molamola, bokyboky, blahblah, majunmajun, impimp, alekalek
+[numeric_only+partial_like_user_or_mail+same_as_user_or_mail] => 2749390, 123321, 805213098, 800487, 029290, 456952, 1071644, 404575, 582615815, 1317659815
+[dictionary_order+keyboard_pattern+repeated_chars] => 1234e1234e, 1234e1234e
+[english_word+keyboard_pattern+repeated_chars] => asdfgasdfg, tylertyler
+[keyboard_pattern+partial_like_user_or_mail+same_as_user_or_mail] => asdf
+[dictionary_order+repeated_chars] => abcdabcd, abcdabcd
+[dictionary_order+english_word+keyboard_pattern+repeated_chars] => 1234fuck1234fuck
+[dictionary_order+keyboard_pattern+partial_like_user_or_mail+same_as_user_or_mail] => PLUM1234
+[date_like+dictionary_order+keyboard_pattern] => ti201234, 121234a
+[english_word+same_as_user_or_mail] => bad-boy-430
+[partial_like_user_or_mail+repeated_chars+same_as_user_or_mail] => sdfsdf
+[dictionary_order+english_word+partial_like_user_or_mail+same_as_user_or_mail] => satya10123
+[date_like+partial_like_user_or_mail+same_as_user_or_mail] => ii250178, sb1959
+[dictionary_order+numeric_only+partial_like_user_or_mail+same_as_user_or_mail] => 1234

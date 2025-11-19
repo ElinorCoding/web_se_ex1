@@ -1,0 +1,52 @@
+数据集: csdn
+模式: 独占
+线程数: 1
+总记录: 1000
+
+=== 单类统计 ===
+same_as_user_or_mail: 41 (4.10%)
+partial_like_user_or_mail: 37 (3.70%)
+repeated_chars: 44 (4.40%)
+dictionary_order: 47 (4.70%)
+keyboard_pattern: 6 (0.60%)
+date_like: 137 (13.70%)
+english_word: 0 (0.00%)
+pinyin: 112 (11.20%)
+numeric_only: 248 (24.80%)
+other: 328 (32.80%)
+
+=== 复合特征（组合尺寸>1） ===
+date_like+numeric_only: 111
+dictionary_order+numeric_only: 31
+partial_like_user_or_mail+same_as_user_or_mail: 19
+numeric_only+repeated_chars: 12
+partial_like_user_or_mail+pinyin: 11
+partial_like_user_or_mail+pinyin+same_as_user_or_mail: 11
+dictionary_order+keyboard_pattern: 10
+pinyin+repeated_chars: 8
+date_like+numeric_only+repeated_chars: 8
+dictionary_order+keyboard_pattern+numeric_only: 4
+keyboard_pattern+pinyin: 2
+date_like+pinyin: 1
+numeric_only+partial_like_user_or_mail+same_as_user_or_mail: 1
+dictionary_order+keyboard_pattern+pinyin: 1
+partial_like_user_or_mail+pinyin+repeated_chars: 1
+partial_like_user_or_mail+repeated_chars: 1
+
+-- 示例（每组合最多10条） --
+[dictionary_order+keyboard_pattern+numeric_only] => 12344321, 567890, 123465, 123415
+[date_like+numeric_only] => 730413, 980527, 19731217, 690929, 991208, 781014, 651107, 19760502, 1999, 961228
+[dictionary_order+keyboard_pattern] => s12345, jeff1234, yeef1234, 1234abc, ghj654321, www123456, play1234, 12345tt, 1234wl, Ryu1234
+[dictionary_order+numeric_only] => 12345, 12345, 12345, 123456, 123456, 4321, 12345678, 1234, 03210, 123456
+[partial_like_user_or_mail+pinyin] => ljinbo, shen502, tide9999, warmsun9421147, lijun7003, netlemonde, zhouyuan, zhaoke079, panyan1, 59432Aqiao
+[partial_like_user_or_mail+pinyin+same_as_user_or_mail] => wangang, jing, SIMAN, wanglin, zhoum163, caoyijie, liduo, 76yuyaojun, wuyanbo, liweim
+[partial_like_user_or_mail+same_as_user_or_mail] => aswind, blacksword, jamstang, chill, whfsdh, libinbj, g6j9m8o6, g6j9m8o6, FireTM, luckies
+[numeric_only+repeated_chars] => 00000, 82998299, 119119, 163163, 37433743, 11111111, 333333, 007007, 986986, 8888
+[pinyin+repeated_chars] => aaaaaa, yongyong, bingbing, aaaaaaaa, shuishui, ganggang, midimidi, editedit
+[keyboard_pattern+pinyin] => yuanji12, asdf200433
+[date_like+pinyin] => 1214oo
+[date_like+numeric_only+repeated_chars] => 1111, 1111, 111111, 111111, 111111, 112112, 111111, 1111
+[numeric_only+partial_like_user_or_mail+same_as_user_or_mail] => 193243
+[dictionary_order+keyboard_pattern+pinyin] => xiaolei123456
+[partial_like_user_or_mail+pinyin+repeated_chars] => chenchen
+[partial_like_user_or_mail+repeated_chars] => oyrloyrl

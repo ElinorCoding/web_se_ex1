@@ -1,0 +1,14 @@
+{
+  "total_targets": 1,
+  "cracked_count": 1,
+  "hit_rate": 1.0,
+  "guesses_tried": 7102,
+  "time_elapsed_sec": 3.20269775390625,
+  "average_guesses_to_crack": 7102.0,
+  "per_target": {
+    "1234567": 7102
+  },
+  "cracked_passwords": [
+    "1234567"
+  ]
+}

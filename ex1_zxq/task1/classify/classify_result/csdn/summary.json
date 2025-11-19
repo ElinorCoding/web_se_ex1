@@ -1,0 +1,59 @@
+{
+  "dataset": "csdn",
+  "exclusive_mode": true,
+  "total": 1000,
+  "single_counts": {
+    "same_as_user_or_mail": 41,
+    "partial_like_user_or_mail": 37,
+    "numeric_only": 248,
+    "repeated_chars": 44,
+    "keyboard_pattern": 6,
+    "dictionary_order": 47,
+    "date_like": 137,
+    "pinyin": 112,
+    "english_word": 0,
+    "other": 328
+  },
+  "single_ratios": {
+    "same_as_user_or_mail": 0.041,
+    "partial_like_user_or_mail": 0.037,
+    "numeric_only": 0.248,
+    "repeated_chars": 0.044,
+    "keyboard_pattern": 0.006,
+    "dictionary_order": 0.047,
+    "date_like": 0.137,
+    "pinyin": 0.112,
+    "english_word": 0.0,
+    "other": 0.328
+  },
+  "order": [
+    "same_as_user_or_mail",
+    "partial_like_user_or_mail",
+    "repeated_chars",
+    "dictionary_order",
+    "keyboard_pattern",
+    "date_like",
+    "english_word",
+    "pinyin",
+    "numeric_only",
+    "other"
+  ],
+  "combo_counts": {
+    "dictionary_order+keyboard_pattern+numeric_only": 4,
+    "date_like+numeric_only": 111,
+    "dictionary_order+keyboard_pattern": 10,
+    "dictionary_order+numeric_only": 31,
+    "partial_like_user_or_mail+pinyin": 11,
+    "partial_like_user_or_mail+pinyin+same_as_user_or_mail": 11,
+    "partial_like_user_or_mail+same_as_user_or_mail": 19,
+    "numeric_only+repeated_chars": 12,
+    "pinyin+repeated_chars": 8,
+    "keyboard_pattern+pinyin": 2,
+    "date_like+pinyin": 1,
+    "date_like+numeric_only+repeated_chars": 8,
+    "numeric_only+partial_like_user_or_mail+same_as_user_or_mail": 1,
+    "dictionary_order+keyboard_pattern+pinyin": 1,
+    "partial_like_user_or_mail+pinyin+repeated_chars": 1,
+    "partial_like_user_or_mail+repeated_chars": 1
+  }
+}

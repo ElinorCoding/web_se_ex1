@@ -1,0 +1,14 @@
+{
+  "total_targets": 3,
+  "cracked_count": 0,
+  "hit_rate": 0.0,
+  "guesses_tried": 500,
+  "time_elapsed_sec": 0.005189180374145508,
+  "average_guesses_to_crack": 0,
+  "per_target": {
+    "LZB861234": null,
+    "84100188": null,
+    "cc15827656140": null
+  },
+  "cracked_passwords": []
+}
