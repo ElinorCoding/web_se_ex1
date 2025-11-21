@@ -1,4 +1,4 @@
-# ex1_zxq 使用说明
+# ex1 使用说明
 
 本目录包含两部分作业：Task1（密码分类与多维度特征分析）与 Task2（离线口令候选生成/评估/模拟）。下文给出目录结构、脚本功能、运行方式与注意事项。
 
@@ -7,7 +7,7 @@
 
 - Task1
 ```
-ex1_zxq/task1/
+ex1_integration/task1/
 ├─ analyze/
 |  ├─ analysis_results/              # 输出：各类分析生成的 JSON 汇总与 TXT 报告
 │  ├─ dictionary_order_analysis.py   # 字典序连续字符分析程序
@@ -31,7 +31,7 @@ ex1_zxq/task1/
 
 - Task2
 ```
-ex1_zxq/task2/
+ex1_integration/task2/
 └─ guess/
    ├─ guess.py                       # CLI：离线候选生成/评估/模拟
    ├─ guess_gui.py                   # GUI：可视化配置与运行
@@ -58,53 +58,53 @@ ex1_zxq/task2/
 ### Task1：密码分类与特征统计分析
 1) 分类（示例：CSDN，抽样 1000 行，单线程）
 ```powershell
-python .\ex1_zxq\task1\classify\classify.py --dataset csdn --limit 1000 --workers 1 --output-dir .\ex1_zxq\task1\classify\classify_result
+python .\ex1_integration\task1\classify\classify.py --dataset csdn --limit 1000 --workers 1 --output-dir .\ex1_integration\task1\classify\classify_result
 ```
 输出：
-- `ex1_zxq/task1/classify/classify_result/csdn/` 下的各类别文本与 `summary.json`
+- `ex1_integration/task1/classify/classify_result/csdn/` 下的各类别文本与 `summary.json`
 - 控制台打印各类别计数与占比
 
 2) 密码特征分析（示例：字典顺序分析）
 ```powershell
-python .\ex1_zxq\task1\analyze\dictionary_order_analysis.py
+python .\ex1_integration\task1\analyze\dictionary_order_analysis.py
 ```
 输出：
-- `./ex1_zxq/task1/analyze/analysis_results/dictionary_order_report.txt`
-- `./ex1_zxq/task1/analyze/analysis_results/date_summary.json`
+- `./ex1_integration/task1/analyze/analysis_results/dictionary_order_report.txt`
+- `./ex1_integration/task1/analyze/analysis_results/date_summary.json`
 
 3) 可视化（可选，需 matplotlib）
 ```powershell
-python .\ex1_zxq\task1\analyze\visualize_results.py
+python .\ex1_integration\task1\analyze\visualize_results.py
 ```
 输出：
-- `ex1_zxq/task1/generated_graphs/` 下各类 PNG 图：
+- `ex1_integration/task1/generated_graphs/` 下各类 PNG 图：
   - 分类占比饼图、各类柱状图、复合特征 TopK、字典序序列/长度/起始字符分布
 
 注意：
-- `classify.py` 默认读取 `ex1_zxq/task1/processed_dataset/` 下数据；
-- `dictionary_order_analysis.py` 采用顶层 `code/processed_dataset/` 的默认路径。如果希望改为使用 `ex1_zxq/task1/processed_dataset/`，可自行调整脚本顶部 `FILE_CSDN/FILE_YAHOO` 的路径。
+- `classify.py` 默认读取 `ex1_integration/task1/processed_dataset/` 下数据；
+- `dictionary_order_analysis.py` 采用顶层 `code/processed_dataset/` 的默认路径。如果希望改为使用 `ex1_integration/task1/processed_dataset/`，可自行调整脚本顶部 `FILE_CSDN/FILE_YAHOO` 的路径。
 
 
 ### Task2：候选生成 / 评估 / 模拟
 1) 评估模式（示例：CSDN，预算 2000）
 ```powershell
-python .\ex1_zxq\task2\guess\guess.py --dataset csdn --budget 2000 --evaluate
+python .\ex1_integration\task2\guess\guess.py --dataset csdn --budget 2000 --evaluate
 ```
 输出：
-- 命中列表与指标 JSON 写入 `ex1_zxq/task2/guess/output/evaluate/`
+- 命中列表与指标 JSON 写入 `ex1_integration/task2/guess/output/evaluate/`
 
 2) 模拟模式（指定/随机目标）
 ```powershell
 # 指定多个目标（逗号分隔），预算 50000，带 2ms 延迟，输出到 metrics.json
-python .\ex1_zxq\task2\guess\guess.py --simulate-targets --target 123456,password --budget 50000 --delay-ms 2 --metrics-out .\metrics.json
+python .\ex1_integration\task2\guess\guess.py --simulate-targets --target 123456,password --budget 50000 --delay-ms 2 --metrics-out .\metrics.json
 
 # 从数据集中随机抽取 3 个目标进行模拟
-python .\ex1_zxq\task2\guess\guess.py --dataset csdn --simulate-targets --random-targets 3 --budget 20000 --demo
+python .\ex1_integration\task2\guess\guess.py --dataset csdn --simulate-targets --random-targets 3 --budget 20000 --demo
 ```
 
 3) GUI（可视化控制，支持前/后缀统一设置与每类单独开关）
 ```powershell
-python .\ex1_zxq\task2\guess\guess_gui.py
+python .\ex1_integration\task2\guess\guess_gui.py
 ```
 功能要点：
 - 生成类型：高频合集、英文核心、日期、键盘/重复、英文词库、拼音姓氏、简单字母数字、穷举数字
