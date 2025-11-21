@@ -1,0 +1,126 @@
+个人信息关联分析报告
+====================
+
+总记录数: 6857159
+存在关联的密码: 757413 (11.05%)
+无关联密码: 6099746 (88.95%)
+
+关联类型分布 (按优先级):
+  exact_username: 321685
+  exact_email: 2975
+  contains_username: 136802
+  contains_localpart: 173086
+  contains_token: 121377
+  deleet_contains_username: 300
+  deleet_contains_token: 339
+  reversed_username: 849
+
+示例（每类最多10条）:
+
+--- exact_username ---
+  src=yahoo_mail_password.txt, user=steveol, email=steveol@flash.net, pass=steveol
+  src=yahoo_mail_password.txt, user=chotzi, email=chotzi@aol.com, pass=chotzi
+  src=yahoo_mail_password.txt, user=lb2512, email=lb2512@yahoo.com, pass=lb2512
+  src=yahoo_mail_password.txt, user=mekola, email=mekola@hughes.net, pass=mekola
+  src=yahoo_mail_password.txt, user=ldeon, email=ldeon@rankingyourwaytothebank.com, pass=ldeon
+  src=yahoo_mail_password.txt, user=demo, email=demo@associatedcontent.com, pass=demo
+  src=yahoo_mail_password.txt, user=sarwar90034, email=sarwar90034@yahoo.com, pass=sarwar90034
+  src=yahoo_mail_password.txt, user=jbmeow, email=jbmeow@yahoo.com, pass=jbmeow
+  src=yahoo_mail_password.txt, user=gschwaid, email=gschwaid@hotmail.com, pass=gschwaid
+  src=yahoo_mail_password.txt, user=blimey, email=blimey@blimey.com, pass=blimey
+
+--- exact_email ---
+  src=yahoo_mail_password.txt, user=prncssmn7, email=prncssmn7@aol.com, pass=Prncssmn7@aol.com
+  src=yahoo_mail_password.txt, user=andre, email=andre@hotmail.com, pass=andre@hotmail.com
+  src=yahoo_mail_password.txt, user=ekas, email=ekas@germanos.com.mk, pass=ekas@germanos.com.mk
+  src=csdn_mail_password_username.txt, user=wpccnxl, email=hero594@126.com, pass=hero594@126.com
+  src=csdn_mail_password_username.txt, user=DELLdell123456789, email=hua.zhang@41go.cn, pass=hua.zhang@41go.cn
+  src=csdn_mail_password_username.txt, user=joytt_168, email=joytt168@163.com, pass=joytt168@163.com
+  src=csdn_mail_password_username.txt, user=wopass, email=haomihao@163.com, pass=haomihao@163.com
+  src=csdn_mail_password_username.txt, user=sunvvip, email=sunv@vip.qq.com, pass=sunv@vip.qq.com
+  src=csdn_mail_password_username.txt, user=wuqi20080601, email=wuqi20080601@126.com, pass=wuqi20080601@126.com
+  src=csdn_mail_password_username.txt, user=hnsmsq, email=hnsmsq@126.com, pass=hnsmsq@126.com
+
+--- contains_username ---
+  src=yahoo_mail_password.txt, user=brianmakely, email=brianmakely@makelyenterprises.com, pass=brianmakely@makelyen
+  src=yahoo_mail_password.txt, user=fishace, email=fishace@iinet.net.au, pass=sbcfishace58
+  src=yahoo_mail_password.txt, user=fred, email=fred@yahoo.com, pass=fredbaxter
+  src=yahoo_mail_password.txt, user=michellemizal, email=michellemizal@yahoo.com, pass=michellemizal1
+  src=yahoo_mail_password.txt, user=eberry, email=eberry@partner-dbs.com, pass=eberry1
+  src=yahoo_mail_password.txt, user=tomas, email=tomas@ihaveabigass.com, pass=tomas123
+  src=yahoo_mail_password.txt, user=quit, email=quit@associatedcontent.com, pass=quitter
+  src=yahoo_mail_password.txt, user=rint, email=rint@gtlaw.com, pass=rintim
+  src=yahoo_mail_password.txt, user=carotine, email=carotine@aol.com, pass=cccarotine
+  src=yahoo_mail_password.txt, user=mollybench, email=mollybench@hotmail.com, pass=mollybench22
+
+--- contains_localpart ---
+  src=csdn_mail_password_username.txt, user=Pizza, email=hycs@163.com, pass=hudahycs
+  src=csdn_mail_password_username.txt, user=leslie, email=shen@kalsoft.online.sh.cn, pass=shen502
+  src=csdn_mail_password_username.txt, user=freedom, email=libinbj@163.net, pass=libinbj
+  src=csdn_mail_password_username.txt, user=g6j9m8o6g6j9m8o6, email=g6j9m8o6@chinaren.com, pass=g6j9m8o6
+  src=csdn_mail_password_username.txt, user=Sun, email=warmsun@yeah.net, pass=warmsun9421147
+  src=csdn_mail_password_username.txt, user=daozhao, email=193243@21cn.com, pass=193243
+  src=csdn_mail_password_username.txt, user=haisen, email=lijun70@263.net, pass=lijun7003
+  src=csdn_mail_password_username.txt, user=whitehorse, email=caoyijie@371.net, pass=caoyijie
+  src=csdn_mail_password_username.txt, user=76yyj, email=76yuyaojun@21cn.com, pass=76yuyaojun
+  src=csdn_mail_password_username.txt, user=wu, email=wuyanbo@8848.net, pass=wuyanbo
+
+--- contains_token ---
+  src=yahoo_mail_password.txt, user=jon, email=jon@BirdBrainStudio.com, pass=jon1216
+  src=yahoo_mail_password.txt, user=doyle.brooks, email=doyle.brooks@gmail.com, pass=janbrooks
+  src=yahoo_mail_password.txt, user=Tara_D_Gilbert, email=Tara_D_Gilbert@hotmail.com, pass=4taradiona
+  src=yahoo_mail_password.txt, user=deb, email=deb@deborahjledford.com, pass=thedebster
+  src=yahoo_mail_password.txt, user=smj, email=smj@carolina.rr.com, pass=dtpsmj
+  src=yahoo_mail_password.txt, user=ron_nabity, email=ron_nabity@yahoo.com, pass=ronmann
+  src=yahoo_mail_password.txt, user=jessie.rosen, email=jessie.rosen@gmail.com, pass=jessie
+  src=yahoo_mail_password.txt, user=traci.ochlich, email=traci.ochlich@cox.net, pass=ochlich
+  src=yahoo_mail_password.txt, user=lulu_plum77, email=lulu_plum77@yahoo.com, pass=Lulu4237
+  src=yahoo_mail_password.txt, user=john.hilton001, email=john.hilton001@gmail.com, pass=john999
+
+--- deleet_contains_username ---
+  src=yahoo_mail_password.txt, user=pete, email=pete@fiddley.com, pass=f@k3p3t3
+  src=yahoo_mail_password.txt, user=watermarq, email=watermarq@hotmail.com, pass=W@termarqac
+  src=yahoo_mail_password.txt, user=dawn, email=dawn@thefrancogroup.com, pass=D@wn3656
+  src=yahoo_mail_password.txt, user=john, email=john@sweet-cures.com, pass=j0hn24twofour
+  src=yahoo_mail_password.txt, user=coolassmike, email=coolassmike@hotmail.com, pass=c00lassmike
+  src=yahoo_mail_password.txt, user=freedom, email=freedom@cvzoom.net, pass=fr33dom
+  src=yahoo_mail_password.txt, user=nogate, email=nogate@gmail.com, pass=n0gate
+  src=yahoo_mail_password.txt, user=viewzi, email=viewzi@gallucci.net, pass=vi3wzi
+  src=yahoo_mail_password.txt, user=melvz, email=melvz@kablogs.com, pass=m3lvzac
+  src=yahoo_mail_password.txt, user=yashinl, email=yashinl@discovery.co.za, pass=yashin1
+
+--- deleet_contains_token ---
+  src=yahoo_mail_password.txt, user=c_gensch, email=c_gensch@yahoo.com, pass=g3n5cH300
+  src=yahoo_mail_password.txt, user=im_a_dancing_gorilla, email=im_a_dancing_gorilla@yahoo.com, pass=gorill@
+  src=yahoo_mail_password.txt, user=athena_catedral, email=athena_catedral@yahoo.com, pass=acatedra1
+  src=yahoo_mail_password.txt, user=alec.cartwright, email=alec.cartwright@gmail.com, pass=al3c1
+  src=yahoo_mail_password.txt, user=jesse_r_watson, email=jesse_r_watson@hotmail.com, pass=w@tson1
+  src=yahoo_mail_password.txt, user=craig.anderson, email=craig.anderson@redwebsolutions.com, pass=anders0n
+  src=yahoo_mail_password.txt, user=donald_c_lee, email=donald_c_lee@hotmail.com, pass=laural33
+  src=yahoo_mail_password.txt, user=brendan.bkennedy, email=brendan.bkennedy@gmail.com, pass=br3nd4n
+  src=yahoo_mail_password.txt, user=one_man_for_one_god, email=one_man_for_one_god@yahoo.com, pass=g0dsp3ak23
+  src=yahoo_mail_password.txt, user=harpreet.chima, email=harpreet.chima@gmail.com, pass=Ch!ma89
+
+--- reversed_username ---
+  src=yahoo_mail_password.txt, user=lisa, email=lisa@localdealscard.com, pass=basilismycat
+  src=yahoo_mail_password.txt, user=tony, email=tony@wolfmntn.com, pass=ynot1234
+  src=yahoo_mail_password.txt, user=ardamun, email=ardamun@rediffmail.com, pass=numadra
+  src=yahoo_mail_password.txt, user=moniere, email=moniere@hotmail.com, pass=ereinom
+  src=yahoo_mail_password.txt, user=sondra, email=sondra@hotmail.com, pass=ardnos
+  src=yahoo_mail_password.txt, user=martin, email=martin@mildmanneredindustries.com, pass=rnitram
+  src=yahoo_mail_password.txt, user=pnkguru, email=pnkguru@yahoo.com, pass=urugknp
+  src=yahoo_mail_password.txt, user=abuzabuz, email=abuzabuz@yahoo.com, pass=zubazuba
+  src=yahoo_mail_password.txt, user=spn45, email=spn45@aol.com, pass=54nps
+  src=yahoo_mail_password.txt, user=mark, email=mark@ecotone.us, pass=wokram
+
+--- no_relation ---
+  src=yahoo_mail_password.txt, user=ac1, email=ac1@associatedcontent.com, pass=@fl!pm0de@
+  src=yahoo_mail_password.txt, user=john, email=john@associatedcontent.com, pass=pass
+  src=yahoo_mail_password.txt, user=daveflomberg, email=daveflomberg@yahoo.com, pass=scotch
+  src=yahoo_mail_password.txt, user=jayschinderman, email=jayschinderman@yahoo.com, pass=passwerd
+  src=yahoo_mail_password.txt, user=leonardo.delarocha, email=leonardo.delarocha@gmail.com, pass=flipmode
+  src=yahoo_mail_password.txt, user=miguel, email=miguel@associatedcontent.com, pass=flipmode
+  src=yahoo_mail_password.txt, user=kirsten, email=kirsten@associatedcontent.com, pass=alden2
+  src=yahoo_mail_password.txt, user=ewowen, email=ewowen@comcast.net, pass=salmon
+  src=yahoo_mail_password.txt, user=timarmstrong, email=timarmstrong@gmail.com, pass=tagoogle
+  src=yahoo_mail_password.txt, user=curranjw, email=curranjw@gmail.com, pass=giants

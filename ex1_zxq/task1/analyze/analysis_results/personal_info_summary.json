@@ -1,0 +1,15 @@
+{
+  "total": 6857159,
+  "related": 757413,
+  "no_relation": 6099746,
+  "detail": {
+    "exact_username": 321685,
+    "exact_email": 2975,
+    "contains_username": 136802,
+    "contains_localpart": 173086,
+    "contains_token": 121377,
+    "deleet_contains_username": 300,
+    "deleet_contains_token": 339,
+    "reversed_username": 849
+  }
+}

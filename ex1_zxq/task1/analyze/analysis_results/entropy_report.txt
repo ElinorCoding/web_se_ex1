@@ -1,0 +1,42 @@
+密码复杂度分析报告 (基于信息熵)
+================================
+说明：熵越高表示随机性越强，密码越安全。
+
+========= Yahoo 熵分析结果 =========
+平均熵值: 2.674 bits/char
+标准差: 0.439
+低熵(0~2): 29083 (6.57%)
+中熵(2~4): 413640 (93.42%)
+高熵(>4): 60 (0.01%)
+
+Top 10 熵最高密码:
+  zQbXThY_}}pR,Z%&lt;93s&#039; -> 4.450
+  vywmapp7iqmncodylqv5ihusp-_hfr -> 4.348
+  abcdefghijklmnopqrst -> 4.322
+  nqgST$ipAlJ6Od#fDz9b -> 4.322
+  h2Kmn7WGrH4IORsDYbvL -> 4.322
+  123456789ABCDEFGHIJK -> 4.322
+  PwjeaP64d2mvtpzsqD35 -> 4.222
+  fUfzb9C%y*ck\oSM,p.4 -> 4.222
+  xV1s%6Wu!lHx^&amp;7B -> 4.222
+  JsAU2LI85uyTvxePOmk8 -> 4.222
+
+========= CSDN 熵分析结果 =========
+平均熵值: 2.743 bits/char
+标准差: 0.452
+低熵(0~2): 432454 (6.74%)
+中熵(2~4): 5978952 (93.21%)
+高熵(>4): 2971 (0.05%)
+
+Top 10 熵最高密码:
+  Plmnkoijbvhuygcxftrd -> 4.322
+  asdfghjklpoiuytrewq1 -> 4.322
+  zxcvbnmasdfghjkl1236 -> 4.322
+  qwertyuiop0987654312 -> 4.322
+  a1w2e3r4t5y6u7i8o9p0 -> 4.322
+  qpwoeiruty0123456789 -> 4.322
+  mnbvcxzasdfghjkloiuy -> 4.322
+  abcdefghijklnop12365 -> 4.322
+  abcdefghjkl123456789 -> 4.322
+  qwertyuiopasdfghjkl9 -> 4.322
+

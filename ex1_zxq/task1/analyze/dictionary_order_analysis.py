@@ -5,15 +5,19 @@ from collections import Counter
 from dataclasses import dataclass
 
 # 输出配置
-OUTPUT_DIR = "analysis_results_dictionary_order"
 TOPK = 10
-os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+OUTPUT_DIR = os.path.join(CURRENT_DIR, "analysis_results")
+TASK1_DIR = os.path.dirname(CURRENT_DIR)
 REPORT_PATH = os.path.join(OUTPUT_DIR, "dictionary_order_report.txt")
-SUMMARY_JSON = os.path.join(OUTPUT_DIR, "summary.json")
+SUMMARY_JSON = os.path.join(OUTPUT_DIR, "dictionary_order_summary.json")
+
+os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # 数据文件相对工程根目录（与 classify 脚本保持一致）
-FILE_CSDN = os.path.join("code", "processed_dataset", "csdn_mail_password_username.txt")
-FILE_YAHOO = os.path.join("code", "processed_dataset", "yahoo_mail_password.txt")
+FILE_CSDN = os.path.join(TASK1_DIR, "processed_dataset", "csdn_mail_password_username.txt")
+FILE_YAHOO = os.path.join(TASK1_DIR, "processed_dataset", "yahoo_mail_password.txt")
 
 # 线性序列最小长度
 MIN_RUN = 4
@@ -78,6 +82,9 @@ def analyze_file(path: str, label: str, limit: int | None = None):
     if not os.path.isfile(path):
         print(f"[WARN] 文件不存在: {path}")
         return None
+    
+    print(f"正在分析: {path}")
+
     total = 0
     dict_order_pwds = []
     run_counter = Counter()
@@ -211,7 +218,7 @@ def write_report(results: list[dict]):
 
 def main():
     print("=" * 60)
-    print("🔍 字典序连续字符口令分析")
+    print("字典序连续字符口令分析")
     print("=" * 60)
     results = []
     if os.path.isfile(FILE_YAHOO):
@@ -220,8 +227,8 @@ def main():
         results.append(analyze_file(FILE_CSDN, 'CSDN'))
     results = [r for r in results if r]
     write_report(results)
-    print(f"✅ 分析完成，报告: {REPORT_PATH}")
-    print(f"📄 汇总: {SUMMARY_JSON}")
+    print(f"分析完成，报告: {REPORT_PATH}")
+    print(f"汇总: {SUMMARY_JSON}")
 
 if __name__ == '__main__':
     main()

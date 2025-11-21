@@ -1,6 +1,6 @@
 # ex1_zxq 使用说明
 
-本目录包含两部分作业：Task1（密码分类与字典序分析）与 Task2（离线口令候选生成/评估/模拟）。下文给出目录结构、脚本功能、运行方式与注意事项。
+本目录包含两部分作业：Task1（密码分类与多维度特征分析）与 Task2（离线口令候选生成/评估/模拟）。下文给出目录结构、脚本功能、运行方式与注意事项。
 
 
 ## 目录结构
@@ -9,8 +9,11 @@
 ```
 ex1_zxq/task1/
 ├─ analyze/
-│  ├─ dictionary_order_analysis.py   # 字典序连续字符分析与报告
-│  └─ visualize_results.py           # 将分类与字典序分析结果绘图（需 matplotlib）
+|  ├─ analysis_results/              # 输出：各类分析生成的 JSON 汇总与 TXT 报告
+│  ├─ dictionary_order_analysis.py   # 字典序连续字符分析程序
+│  ├─ composition_analysis.py        # 字符组成模式分析程序（数字/字母/符号结构）
+│  ├─ ...                            # 其他特征分析程序
+│  └─ visualize_results.py           # 统一可视化脚本（读取所有分析结果并绘图 —— 需要 matplotlib）
 ├─ classify/
 │  ├─ classify.py                    # 密码分类主脚本（可扩展分类器）
 │  ├─ categories/                    # 分类器定义（可按需添加/调整）
@@ -19,7 +22,8 @@ ex1_zxq/task1/
 ├─ dicts/
 │  ├─ pinyin_surnames.txt            # 拼音姓氏词表
 │  └─ pinyin_syllables.txt           # 拼音音节词表
-├─ generated_graphs/                 # 输出：各类图表
+├─ generated_graphs/                 # 输出：各类可视化图表（按分析类型分文件夹）
+│  └─ ...           
 └─ processed_dataset/
    ├─ csdn_mail_password_username.txt
    └─ yahoo_mail_password.txt
@@ -51,7 +55,7 @@ ex1_zxq/task2/
 ## 快速开始（建议在仓库根目录运行）
 以下命令默认工作目录：`C:\Users\Wanderer\AAAUCAS\25-9\Websec\Teamwork1`（仓库根）。
 
-### Task1：分类与字典序分析
+### Task1：密码分类与特征统计分析
 1) 分类（示例：CSDN，抽样 1000 行，单线程）
 ```powershell
 python .\ex1_zxq\task1\classify\classify.py --dataset csdn --limit 1000 --workers 1 --output-dir .\ex1_zxq\task1\classify\classify_result
@@ -60,13 +64,13 @@ python .\ex1_zxq\task1\classify\classify.py --dataset csdn --limit 1000 --worker
 - `ex1_zxq/task1/classify/classify_result/csdn/` 下的各类别文本与 `summary.json`
 - 控制台打印各类别计数与占比
 
-2) 字典序分析（对 Top 级数据集路径已就绪）
+2) 密码特征分析（示例：字典顺序分析）
 ```powershell
 python .\ex1_zxq\task1\analyze\dictionary_order_analysis.py
 ```
 输出：
-- `analysis_results_dictionary_order/dictionary_order_report.txt`
-- `analysis_results_dictionary_order/summary.json`
+- `./ex1_zxq/task1/analyze/analysis_results/dictionary_order_report.txt`
+- `./ex1_zxq/task1/analyze/analysis_results/date_summary.json`
 
 3) 可视化（可选，需 matplotlib）
 ```powershell
